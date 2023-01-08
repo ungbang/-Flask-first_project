@@ -12,7 +12,7 @@ def home():
     if "userID" in session:
         return render_template("home.html", username = session.get("userID"),login=Ture)
     else:
-        return render_template(login=False)
+        return render_template("home.html", login=False)
 
 @application.route("/login", methods=["get"])
 def login():

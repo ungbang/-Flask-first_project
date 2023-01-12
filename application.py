@@ -10,7 +10,7 @@ PW = "world"
 @application.route("/")
 def home():
     if "userID" in session:
-        return render_template("home.html", username = session.get("userID"),login=Ture)
+        return render_template("home.html", username = session.get("userID"),login=True)
     else:
         return render_template("home.html", login=False)
 
